@@ -15,7 +15,9 @@ public class Program {
         System.out.print("Insira seu nome: ");
         String nomeCliente = sc.nextLine();
         System.out.println("Olá, " + nomeCliente + "! Bem vindo ao banco " + banco.getNome());
-        while (true) {
+
+        boolean continuar = true;
+        while (continuar) {
             banco.menu();
             char op = sc.next().charAt(0);
 
@@ -27,6 +29,7 @@ public class Program {
                     banco.menuCliente(nomeCliente);
                     break;
                 case '9':
+                    continuar = false;
                     break;
                 default:
                     System.out.println("Opção inválida!");
