@@ -2,7 +2,10 @@ package entities;
 
 import interfaces.Operacoes;
 
+import java.util.Scanner;
+
 public abstract class Conta implements Operacoes {
+    Scanner sc = new Scanner(System.in);
 
     private static int SEQUENCIAL = 1;
     private static final int AGENCIA_PADRAO = 1;
